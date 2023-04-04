@@ -10,7 +10,7 @@ const router = new VueRouter({
     {
       path: "/",
       name: "home",
-      component: () => import('@/components/UserAccount.vue'),
+      component: () => import("@/components/UserAccount.vue"),
     },
   ],
 });
