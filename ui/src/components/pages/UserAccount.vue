@@ -20,13 +20,18 @@
 </template>
 
 <script>
-import NavigationPanel from './NavigationPanel/NavigationPanel.vue';
-import UserMenu from './UserMenu/UserMenu.vue';
+import NavigationPanel from '../NavigationPanel/NavigationPanel.vue';
+import UserMenu from '../UserMenu/UserMenu.vue';
 
 export default {
   components: {
     NavigationPanel,
     UserMenu,
+  },
+  data() {
+    return {
+      userInfo: {},
+    }
   },
 }
 </script>
@@ -43,7 +48,7 @@ export default {
   background-position: center;
   background-size: contain;
   background-color: $primary-color;
-  height: 410px;
+  height: 430px;
 }
 
 .user-header__wrapper {
@@ -52,7 +57,7 @@ export default {
 }
 
 .user-controls {
-  padding-top: 36px;
+  padding-top: 55px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

@@ -41,7 +41,7 @@ export default {
   &.user-menu__group__favorite {
     margin: -90px auto 0 auto;
     background: #FDFFFF;
-    border-radius: 15px 15px 0px 0px;
+    border-radius: 15px;
     filter: drop-shadow(0px 20px 120px rgba(35, 35, 35, 0.05));
     backdrop-filter: blur(25px);
   }

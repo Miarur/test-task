@@ -1,7 +1,7 @@
 <template>
   <nav class="navigation-panel">
     <li class="navigation-panel__item">
-      <a href="#">
+      <a class="navigation__link" href="#">
         <img
           class="item__icon"
           src="@/assets/icons/panel/home.svg"
@@ -10,7 +10,7 @@
       </a>
     </li>
     <li class="navigation-panel__item">
-      <a href="#">
+      <a class="navigation__link" href="#">
         <img
           class="item__icon"
           src="@/assets/icons/panel/friends.svg"
@@ -19,12 +19,12 @@
       </a>
     </li>
     <li class="navigation-panel__item">
-      <a href="#">
+      <a class="navigation__link" href="#">
         <img class="item__icon" src="@/assets/icons/panel/add.svg" alt="chat" />
       </a>
     </li>
     <li class="navigation-panel__item">
-      <a href="#">
+      <a class="navigation__link" href="#">
         <img
           class="item__icon"
           src="@/assets/icons/panel/likes.svg"
@@ -33,7 +33,7 @@
       </a>
     </li>
     <li class="navigation-panel__item">
-      <a href="#">
+      <a class="navigation__link" href="#">
         <img
           class="item__icon"
           src="@/assets/icons/panel/user.svg"
@@ -57,7 +57,7 @@ export default {};
   align-items: center;
   justify-content: space-between;
   padding: 15px;
-  max-width: 350p;
+  max-width: 350px;
   max-height: 70px;
   background-color: $secondary-color;
   box-shadow: 0px 5px 30px rgba(123, 122, 122, 0.5);
@@ -66,5 +66,11 @@ export default {};
 
 .navigation-panel__item {
   list-style: none;
+}
+
+.navigation__link {
+  padding: 0;
+  margin: 0;
+  border: none;
 }
 </style>
