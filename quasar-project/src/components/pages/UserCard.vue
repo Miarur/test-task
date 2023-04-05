@@ -27,40 +27,40 @@
 </template>
 
 <script>
-import NavigationPanel from "../NavigationPanel/NavigationPanel.vue";
-import UserMenu from "../UserMenu/UserMenu.vue";
+import NavigationPanel from '../NavigationPanel/NavigationPanel.vue'
+import UserMenu from '../UserMenu/UserMenu.vue'
 
 export default {
   components: {
     NavigationPanel,
-    UserMenu,
+    UserMenu
   },
   props: {
     user: {
-      type: Object,
-    },
+      type: Object
+    }
   },
   methods: {
-    formatPostData(data) {
-      return new Intl.DateTimeFormat("ru-RU", {
+    formatPostData (data) {
+      return new Intl.DateTimeFormat('ru-RU', {
         year: 'numeric',
         month: 'numeric',
-        day: 'numeric',
-      }).format(new Date(data));
-    },
-  },
-};
+        day: 'numeric'
+      }).format(new Date(data))
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>
-@import '@/styles/main.scss';
+@import '../../css/app.scss';
 
 .user-card {
   color: $main-color;
 }
 
 .user-card__header {
-  background: url('@/assets/img/Vector.svg') no-repeat;
+  background: url('../../assets/img/Vector.svg') no-repeat;
   background-position: center;
   background-size: contain;
   background-color: $primary-color;
@@ -93,12 +93,12 @@ export default {
   border: none;
 
   &.user-card__btn_back {
-    background: url('@/assets/icons/usermenu/arrow.svg') no-repeat rgba(249, 249, 249, 0.1);
+    background: url('../../assets/icons/usermenu/arrow.svg') no-repeat rgba(249, 249, 249, 0.1);
     background-position: center;
   }
 
   &.user-card__btn_options {
-    background: url('@/assets/icons/usermenu/dots.svg') no-repeat rgba(249, 249, 249, 0.1);
+    background: url('../../assets/icons/usermenu/dots.svg') no-repeat rgba(249, 249, 249, 0.1);
     background-position: center;
   }
 }
@@ -122,16 +122,19 @@ export default {
 }
 
 .user-info__fullname {
+  margin: 0;
   padding-top: 10px;
   @include font('Inter', 16px, 19px, 500, normal, normal);
 }
 
 .user-info__email {
+  margin: 0;
   padding-top: 5px;
   @include font('Inter', 12px, 15px, 400, normal, -0.01em);
 }
 
 .user-info__birthday {
+  margin: 0;
   padding-top: 5px;
   @include font('Inter', 12px, 15px, 400, normal, -0.01em);
 }</style>

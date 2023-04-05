@@ -1,0 +1,23 @@
+.slide-enter {
+  top: -100%;
+}
+
+.slide-enter-active {
+  animation: move-left 0.5s ease-in-out;
+}
+
+.slide-leave-active {
+  animation: move-left 0.5s ease-in-out reverse;
+}
+
+@keyframes move-left {
+  from {
+    top: -100%;
+    opacity: 0;
+  }
+
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
