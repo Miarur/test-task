@@ -59,42 +59,27 @@ export default {
   justify-content: flex-start;
   min-height: 55px;
 }
-
 .icon__block {
   width: 40px;
 }
-
 .item__icon {
   margin-left: 15px;
 }
-
 .user-menu__content {
   display: flex;
   flex-direction: row;
   width: 295px;
 }
-
 .item__text {
   padding-left: 10px;
   text-align: left;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 18px;
+  @include font('Inter', 16px, normal, 500, 18px, normal);
 }
-
 .item__counter {
   padding-left: 15px;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 18px;
-  letter-spacing: 0.02em;
-  color: #d0d0d0;
+  @include font('Inter', 16px, normal, 500, 18px, 0.02em);
+  color: $color-light;
 }
-
 .item__btn {
   margin-left: auto;
   margin-right: 25px;

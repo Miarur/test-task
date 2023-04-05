@@ -1,16 +1,20 @@
 <template>
-  <UserAccount />
+  <UserCard :user="user" />
 </template>
 
 <script>
-import UserAccount from '../components/pages/UserAccount.vue';
-  export default {
-    components: {
-      UserAccount,
-    },
-  }
+import { mapState } from "vuex";
+import UserCard from "../components/pages/UserCard.vue";
+export default {
+  components: {
+    UserCard,
+  },
+  computed: {
+    ...mapState({
+      user: (state) => state.user.userInfo,
+    }),
+  },
+}
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

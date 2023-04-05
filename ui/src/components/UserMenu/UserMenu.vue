@@ -35,12 +35,12 @@ export default {
   flex-direction: column;
   max-width: 335px;
   align-items: center;
-  background: #FDFFFF;
+  background: $main-color;
   border-radius: 15px;
 
   &.user-menu__group__favorite {
     margin: -90px auto 0 auto;
-    background: #FDFFFF;
+    background: $main-color;
     border-radius: 15px;
     filter: drop-shadow(0px 20px 120px rgba(35, 35, 35, 0.05));
     backdrop-filter: blur(25px);
