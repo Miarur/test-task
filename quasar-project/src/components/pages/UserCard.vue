@@ -19,7 +19,7 @@
         </div>
       </div>
       <div class="user-card__wrapper user-card__wrapper_body">
-        <UserMenu />
+        <UserMenu/>
         <NavigationPanel />
       </div>
     </div>

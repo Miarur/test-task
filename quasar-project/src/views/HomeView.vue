@@ -1,5 +1,5 @@
 <template>
-  <UserCard :user="user" />
+  <UserCard :user="user"></UserCard>
 </template>
 
 <script>
@@ -13,6 +13,16 @@ export default {
     ...mapState({
       user: (state) => state.user.userInfo
     })
+  },
+  watch: {
+    user: {
+      immediate: true,
+      handler (value) {
+        if (!value) {
+          this.$store.dispatch('initUserInfo')
+        }
+      }
+    }
   }
 }
 </script>
