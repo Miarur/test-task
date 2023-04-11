@@ -5,7 +5,7 @@
     </div>
     <div class="user-menu__content">
       <span class="item__text">{{ menuTitle }}</span>
-      <span class="item__counter">{{ countWishes }}</span>
+      <span class="item__counter">{{ count }}</span>
       <span v-if="status" class="item__counter">{{ status }} </span>
       <img class="item__btn" src="../../assets/icons/usermenu/arrow-right.svg" />
     </div>
@@ -15,7 +15,7 @@
 <script>
 export default {
   props: {
-    countWishes: {
+    count: {
       type: Number,
       default: null
     },

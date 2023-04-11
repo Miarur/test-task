@@ -1,12 +1,12 @@
 <template>
   <div class="user-menu">
     <div class="user-menu__group user-menu__group__favorite">
-      <UserMenuItem icon="heart" menuTitle="Мои желания" :countWishes="5" />
-      <UserMenuItem menuTitle="Мои бронирования" :countWishes="5" />
+      <UserMenuItem icon="heart" menuTitle="Мои желания" :count="user.countWishes" />
+      <UserMenuItem menuTitle="Мои бронирования" :count="user.countBooking" />
     </div>
 
     <div class="user-menu__group ">
-      <UserMenuItem icon="friends" menuTitle="Мои друзья" :countWishes="5" />
+      <UserMenuItem icon="friends" menuTitle="Мои друзья" :count="user.countFriends" />
       <UserMenuItem icon="status" menuTitle="Статус" status="Открыто для всех" />
       <UserMenuItem menuTitle="Помощь/поддержка" />
     </div>
@@ -14,11 +14,17 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 import UserMenuItem from './UserMenuItem.vue'
 
 export default {
   components: {
     UserMenuItem
+  },
+  computed: {
+    ...mapState({
+      user: (state) => state.user.userInfo
+    })
   }
 }
 </script>
