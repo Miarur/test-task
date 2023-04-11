@@ -10,7 +10,7 @@ const mutations = {
 
 const actions = {
   async initUserInfo ({ commit }) {
-    const response = await fetch('http://api.givemewish.ru/users/i/info/my')
+    const response = await fetch('https://api.givemewish.ru/users/i/info/my')
     const data = await response.json()
     commit('setUserInfo', data)
   }
